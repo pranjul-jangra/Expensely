@@ -45,7 +45,7 @@ export default function RenderSavings({ isLightTheme = false }) {
         ))}
         {
           savingsList?.length === 0 && <div className={`${grayText} w-full flex justify-center items-center`}>
-            <div onClick={() => navigate("/settings/savings")} className="flex flex-col items-center justify-center text-center py-6 px-9 border border-dashed border-blue-300 rounded-xl bg-zinc-900/20 shadow-sm transition hover:shadow-md hover:border-blue-400 max-w-sm mx-auto group">
+            <div onClick={() => navigate("/settings/savings")} className={`flex flex-col items-center justify-center text-center py-6 px-9 border border-dashed border-blue-300 rounded-xl shadow-sm transition hover:shadow-md hover:border-blue-400 max-w-sm mx-auto group`}>
               <p className="text-gray-400 mb-2 text-sm">No savings to display</p>
               <HiOutlinePlusCircle className="w-12 h-12 text-blue-400 group-hover:text-blue-500 transition-colors mb-2" />
               <p className="text-blue-300 font-medium text-sm group-hover:underline">
