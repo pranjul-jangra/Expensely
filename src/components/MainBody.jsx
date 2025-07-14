@@ -64,7 +64,7 @@ export default function MainBody({ isLightTheme }) {
                 </div>
                 <div className={`${borderColor} hover:shadow ${hoverShadow} max-sm:col-span-2 transition-shadow duration-150`}>
                     <p className={`${grayText}`}>Balance</p>
-                    <p className="flex gap-1 items-center text-xl text-yellow-500 font-bold"><FaIndianRupeeSign />{user?.income && (user?.income - user?.expense).toLocaleString()}</p>
+                    <p className="flex gap-1 items-center text-xl text-yellow-500 font-bold"><FaIndianRupeeSign />{user?.income ? (user?.income - user?.expense).toLocaleString() : 0}</p>
                 </div>
             </article>
 

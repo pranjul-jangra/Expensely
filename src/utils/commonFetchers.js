@@ -9,6 +9,7 @@ export const refreshAuthToken = async () => {
 
         const response = await interceptor.get('/api/user/refresh');
         const newToken = response.data?.accessToken;
+        console.log("New token:", newToken);
 
         if (newToken) {
             store.dispatch(setToken(newToken));
@@ -29,6 +30,8 @@ export const fetchUser = async () => {
     try {
         const response = await interceptor.get('/api/user/data');
         const userData = response.data?.user;
+
+        console.log("User data:", userData);
 
         // Update store with user data
         store.dispatch(setUser(userData));
