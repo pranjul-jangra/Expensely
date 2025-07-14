@@ -1,0 +1,65 @@
+export const savingMethods = {
+    "Traditional Savings": [
+        { method: "Bank Savings", label: "Bank Savings (Savings/Fixed Deposits)", amount: null },
+        { method: "Recurring Deposits", label: "Recurring Deposits", amount: null },
+        { method: "Cash", label: "Cash", amount: null },
+        { method: "UPI Wallets", label: "UPI Wallets (e.g. PhonePe, Paytm, Google Pay)", amount: null },
+        { method: "Digital Wallets", label: "Digital Wallets (e.g. PayPal, Amazon Pay)", amount: null },
+        { method: "Pension/Provident Fund", label: "Pension/Provident Fund (EPF/PPF)", amount: null },
+    ],
+    "Market Investments": [
+        { method: "Stocks/Equity Shares", label: "Stocks/Equity Shares", amount: null },
+        { method: "Mutual Funds", label: "Mutual Funds", amount: null },
+        { method: "Exchange Traded Funds", label: "Exchange Traded Funds (ETFs)", amount: null },
+        { method: "Index Funds", label: "Index Funds", amount: null },
+        { method: "Derivatives", label: "Derivatives (Options, Futures)", amount: null },
+    ],
+    "Physical Assets": [
+        { method: "Real Estate / Property", label: "Real Estate / Property", amount: null },
+        { method: "Vehicles", label: "Vehicles (Trucks, Cars, etc.)", amount: null },
+        { method: "Gems & Crystalls", label: "Gems & Crystalls", amount: null },
+        { method: "Gold & Precious Metals", label: "Gold & Precious Metals", amount: null },
+        { method: "Silver, Platinum, etc", label: "Silver, Platinum, etc", amount: null },
+        { method: "Art & Collectibles", label: "Art & Collectibles", amount: null },
+    ],
+    "Digital Assets": [
+        { method: "Cryptocurrencies", label: "Cryptocurrencies (Bitcoin, Ethereum, etc.)", amount: null },
+        { method: "NFTs (Non-Fungible Tokens)", label: "NFTs (Non-Fungible Tokens)", amount: null },
+        { method: "Digital Domains / Online Assets", label: "Digital Domains / Online Assets", amount: null },
+    ],
+    "Bonds & Fixed Income": [
+        { method: "Government Bonds", label: "Government Bonds", amount: null },
+        { method: "Corporate Bonds", label: "Corporate Bonds", amount: null },
+        { method: "Debentures", label: "Debentures", amount: null },
+        { method: "Treasury Bills", label: "Treasury Bills", amount: null },
+    ],
+    "Insurance Instruments": [
+        { method: "Life Insurance", label: "Life Insurance (Term, Endowment)", amount: null },
+        { method: "ULIPs (Unit Linked Insurance Plans)", label: "ULIPs (Unit Linked Insurance Plans)", amount: null },
+        { method: "Health Insurance", label: "Health Insurance", amount: null },
+        { method: "Pension Plans (Annuities)", label: "Pension Plans (Annuities)", amount: null },
+    ],
+    "Retirement & Employer Benefits": [
+        { method: "Employee Provident Fund (EPF)", label: "Employee Provident Fund (EPF)", amount: null },
+        { method: "Public Provident Fund (PPF)", label: "Public Provident Fund (PPF)", amount: null },
+        { method: "National Pension System (NPS)", label: "National Pension System (NPS)", amount: null },
+        { method: "Gratuity / Superannuation Funds", label: "Gratuity / Superannuation Funds", amount: null },
+    ],
+    "Business/Ownership Assets": [
+        { method: "Equity in Private Business", label: "Equity in Private Business", amount: null },
+        { method: "Partnership Capital", label: "Partnership Capital", amount: null },
+        { method: "Royalties or Intellectual Property (IP)", label: "Royalties or Intellectual Property (IP)", amount: null },
+    ],
+    "Education/Skill Savings": [
+        { method: "Education Fund", label: "Education Fund", amount: null },
+        { method: "Skill/Certification Fund", label: "Skill/Certification Fund", amount: null },
+        { method: "Scholarship Fund", label: "Scholarship Fund", amount: null },
+    ],
+    "Other": [
+        { method: "Emergency Fund", label: "Emergency Fund", amount: null },
+        { method: "Travel Fund", label: "Travel Fund", amount: null },
+        { method: "Marriage Fund", label: "Marriage Fund", amount: null },
+        { method: "Home Renovation Fund", label: "Home Renovation Fund", amount: null },
+        { method: "Miscellaneous / Other", label: "Miscellaneous / Other", amount: null },
+    ],
+}

@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* Hide scrollbar ========================================================================================== */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: mono;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom classes =========================================================================================== */
+.body-header-grid {
+  grid-template-columns: 1fr 1fr 300px;
+}
+
+.three-column-grid {
+  grid-template-columns: 1fr 1fr 300px;
+}
+
+/* Loader===================================================================================================== */
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
+
+.expensely-loader {
+  display: flex;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  color: #2563eb;
+}
+
+.loader-letter {
+  opacity: 0.4;
+  transform: translateY(0px);
+  animation: waveFadeUp 1.5s ease-in-out infinite;
+}
+
+@keyframes waveFadeUp {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+/* Toast CSS ========================================================================================================== */
+
+.Toastify__toast {
+  font-size: 0.925rem;
+  font-weight: 500;
+  font-family: mono;
+  border: 1px solid transparent;
+  backdrop-filter: blur(4px);
+  color: white;
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.74));
+}
+
+.Toastify__toast-icon {
+  margin-inline-end: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.Toastify__close-button {
+  color: white;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .three-column-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .body-header-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .three-column-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .body-header-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
