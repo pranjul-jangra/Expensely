@@ -10,10 +10,10 @@ export default function MonthlyGoalProgress({ isLightTheme }) {
   const currentSaved = income - expense;
   const percentIncome = 100;
   const percentExpense = income > 0 ? (expense / income) * 100 : 0;
-  const percentGoal = income > 0 ? (goal / income) * 100 : 0;
+  const goalMarkerPosition = income > 0 ? ((income - goal) / income) * 100 : 0;
 
   // Conditions to show warnings
-  const showGoalExceeded = expense > goal;
+  const showGoalExceeded = currentSaved < goal;
   const showExpenseOverIncome = expense > income;
 
   // Theme style
@@ -46,7 +46,7 @@ export default function MonthlyGoalProgress({ isLightTheme }) {
         {/* Expense overlay */}
         <div className="absolute left-0 top-0 h-full bg-red-400" style={{ width: `${Math.min(percentExpense, 100)}%` }} />
         {/* Goal marker */}
-        <div className="absolute top-0 bottom-0 w-1 bg-green-500" style={{ left: `${Math.min(percentGoal, 100)}%` }} />
+        <div className="absolute top-0 bottom-0 w-1 bg-green-500" style={{ left: `${Math.min(goalMarkerPosition, 100)}%` }} />
       </div>
 
 
@@ -72,8 +72,8 @@ export default function MonthlyGoalProgress({ isLightTheme }) {
       </Tooltip>
 
       <Tooltip id="goalTip" place="top" style={{ fontSize: "0.75rem" }}>
-        Monthly savings goal: ₹{goal.toLocaleString()} <br />
-        {expense > goal ? "You've exceeded your goal" : "You're under your goal"}
+        Savings goal: ₹{goal.toLocaleString()} <br />
+        {currentSaved >= goal ? "You've met your savings goal" : "You haven't met your savings goal yet"}
       </Tooltip>
     </div>
   );
