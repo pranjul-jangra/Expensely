@@ -8,20 +8,21 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function CategoryDonutChart({ isLightTheme }) {
     const donutData = useSelector(state => state.user.donutData);
-    const user = useSelector(state => state.user.user);
 
     useEffect(() => {
-        async function getData() {
-            if ((user.email && user.name) || (donutData?.length !== 0)) return;
-            
-            try {
-                await getDonutData();
-            } catch (error) {
-                console.log("Error getting donut data:", error);
+        const fetchData = async () => {
+            if (donutData === null) {
+                try {
+                    await getDonutData();
+                } catch (error) {
+                    console.log("Error getting donut data:", error);
+                }
             }
-        }
-        getData();
-    }, [donutData, user]);
+        };
+
+        fetchData();
+    }, [donutData]);
+
 
     const hasData = donutData?.length > 0;
 

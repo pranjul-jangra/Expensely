@@ -5,7 +5,7 @@ const initialState = {
     user: {},
     expensesPerMonth: null,
     transactionToEdit: {},
-    donutData: [],
+    donutData: null,
     token: "",
     loader: false,
     rateLimitExceeds: false,

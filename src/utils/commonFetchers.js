@@ -9,7 +9,6 @@ export const refreshAuthToken = async () => {
 
         const response = await interceptor.get('/api/user/refresh');
         const newToken = response.data?.accessToken;
-        console.log("New token:", newToken);
 
         if (newToken) {
             store.dispatch(setToken(newToken));
@@ -30,8 +29,6 @@ export const fetchUser = async () => {
     try {
         const response = await interceptor.get('/api/user/data');
         const userData = response.data?.user;
-
-        console.log("User data:", userData);
 
         // Update store with user data
         store.dispatch(setUser(userData));
@@ -70,10 +67,12 @@ export const getExpensesPerMonth = async (year) => {
 export const getDonutData = async () => {
     try {
         const res = await interceptor.get('/api/expense/top-five-expenses');
-        store.dispatch(setDonutData(res.data?.categories));
-        return res.data?.categories;
+        const categories = res.data?.categories || [];
+        store.dispatch(setDonutData(categories));
+        return categories;
 
     } catch (error) {
+        store.dispatch(setError(error.response?.data || "Failed to fetch donut data"));
         throw error;
     }
 }
