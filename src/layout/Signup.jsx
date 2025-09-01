@@ -158,7 +158,7 @@ export default function Signup({ isLightTheme }) {
         <>
             <main className={`w-screen h-dvh px-10 max-md:px-3 pt-10 overflow-hidden ${bgColor} flex gap-20 *:w-full *:h-full *:overflow-y-auto *:px-4`}>
                 {/* Aside */}
-                <article>
+                <article className="max-md:hidden">
                     <h1 className="font-bold tracking-wide text-3xl mb-4">Money management made easy.</h1>
                     <p className={`${grayText}`}>Your personal money assistant — track expenses, set budgets, and analyze spending like never before.</p>
 
