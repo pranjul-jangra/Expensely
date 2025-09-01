@@ -27,15 +27,15 @@ export default function MonthlyGoalProgress({ isLightTheme }) {
       <div className="flex flex-col gap-1 mb-3">
         <div className="flex items-center gap-2 text-sm" data-tooltip-id="incomeTip">
           <span className="w-2.5 h-2.5 bg-blue-500 rounded-full"></span>
-          Income: <span className="text-blue-500 font-semibold">₹{income.toLocaleString()}</span>
+          Income: <span className="text-blue-500 font-semibold">₹{income?.toLocaleString()}</span>
         </div>
         <div className="flex items-center gap-2 text-sm" data-tooltip-id="expenseTip">
           <span className="w-2.5 h-2.5 bg-red-500 rounded-full"></span>
-          Expense: <span className="text-red-500 font-semibold">₹{expense.toLocaleString()}</span>
+          Expense: <span className="text-red-500 font-semibold">₹{expense?.toLocaleString()}</span>
         </div>
         <div className="flex items-center gap-2 text-sm" data-tooltip-id="goalTip">
           <span className="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
-          Goal: <span className="text-green-500 font-semibold">₹{goal.toLocaleString()}</span>
+          Goal: <span className="text-green-500 font-semibold">₹{goal?.toLocaleString()}</span>
         </div>
       </div>
 
@@ -52,8 +52,8 @@ export default function MonthlyGoalProgress({ isLightTheme }) {
 
       {/* Text summary below */}
       <div className={`text-xs mt-2 mb-2 ${grayText}`}>
-        You’ve saved <span className="text-blue-500 font-semibold">₹{currentSaved.toLocaleString()}</span> out of your income of ₹{income.toLocaleString()}.
-        Your savings goal is ₹{goal.toLocaleString()}.
+        You’ve saved <span className="text-blue-500 font-semibold">₹{currentSaved.toLocaleString()}</span> out of your income of ₹{income?.toLocaleString()}.
+        Your savings goal is ₹{goal?.toLocaleString()}.
       </div>
 
       {/* Warnings */}
@@ -63,16 +63,16 @@ export default function MonthlyGoalProgress({ isLightTheme }) {
 
       {/* Tooltips */}
       <Tooltip id="incomeTip" place="top" style={{ fontSize: "0.75rem" }}>
-        Total income: ₹{income.toLocaleString()} <br />
-        Remaining: ₹{(income - expense).toLocaleString()}
+        Total income: ₹{income?.toLocaleString()} <br />
+        Remaining: ₹{(income - expense)?.toLocaleString()}
       </Tooltip>
 
       <Tooltip id="expenseTip" place="top" style={{ fontSize: "0.75rem" }}>
-        You’ve spent ₹{expense.toLocaleString()} out of your income of ₹{income.toLocaleString()}
+        You’ve spent ₹{expense?.toLocaleString()} out of your income of ₹{income?.toLocaleString()}
       </Tooltip>
 
       <Tooltip id="goalTip" place="top" style={{ fontSize: "0.75rem" }}>
-        Savings goal: ₹{goal.toLocaleString()} <br />
+        Savings goal: ₹{goal?.toLocaleString()} <br />
         {currentSaved >= goal ? "You've met your savings goal" : "You haven't met your savings goal yet"}
       </Tooltip>
     </div>

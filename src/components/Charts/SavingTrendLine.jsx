@@ -5,7 +5,7 @@ import { Chart as ChartJS, LineElement, PointElement, LinearScale, CategoryScale
 ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale);
 
 
-function generateDeterministicTrend(income, expense, goal) {
+function generateDeterministicTrend(income = 0, expense = 0, goal = 0) {
   const base = income - expense;
   const seed = `${income}-${expense}-${goal}`;
   const hash = [...seed].reduce((acc, char) => acc + char.charCodeAt(0), 0);

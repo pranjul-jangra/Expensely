@@ -233,7 +233,7 @@ export default function UpsertTransaction({ isLightTheme }) {
                 <label htmlFor="category" className={`font-semibold tracking-wide mt-3 ${grayText}`}>Category*</label>
 
                 <small className={`${grayText} mt-0.5`}>
-                    {transactionData.type === "income" ? "Select the source of this income (e.g., Salary, Freelance, Refund)." : "Select the purpose of this expense (e.g., Food, Bills, Transport)."}
+                    {transactionData?.type === "income" ? "Select the source of this income (e.g., Salary, Freelance, Refund)." : "Select the purpose of this expense (e.g., Food, Bills, Transport)."}
                 </small>
 
                 <select name="category" id="category" value={transactionData.category} onChange={handleChange} className={`border ${borderColor} ${inputBg} mt-2 w-full rounded-lg px-2 py-2.5`}>
@@ -248,7 +248,7 @@ export default function UpsertTransaction({ isLightTheme }) {
                 <label htmlFor="account" className={`font-semibold tracking-wide mt-3 ${grayText}`}>Account*</label>
 
                 <small className={`${grayText} mt-0.5`}>
-                    {transactionData.type === "income" ? "Choose where you received this income (e.g., Bank, Wallet, Cash)." : "Choose the payment method used (e.g., Credit Card, UPI, Cash)."}
+                    {transactionData?.type === "income" ? "Choose where you received this income (e.g., Bank, Wallet, Cash)." : "Choose the payment method used (e.g., Credit Card, UPI, Cash)."}
                 </small>
 
                 <select name="account" id="account" value={transactionData.account} onChange={handleChange} className={`border ${borderColor} ${inputBg} mt-2 w-full rounded-lg px-2 py-2.5`}>

@@ -72,7 +72,7 @@ export default function CategoryDonutChart({ isLightTheme }) {
                     ?
                     <Doughnut data={data} options={options} />
                     :
-                    <p className={`text-sm ${isLightTheme ? "text-gray-400" : "text-gray-500"}`}>No expense data to display.</p>
+                    <p className={`text-sm ${isLightTheme ? "text-gray-400" : "text-gray-500"}`}>No expense for this month.</p>
                 }
             </div>
             <p className="text-gray-500 text-sm pb-4 text-center w-full">Top 5 most expensed categories</p>
